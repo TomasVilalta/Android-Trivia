@@ -98,11 +98,11 @@ class GameFragment : Fragment() {
                         binding.invalidateAll()
                     } else {
                         //Won! Send to the Game won fragment
-                        view.findNavController().navigate(R.id.action_gameFragment_to_gameWonFragment2)
+                        view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameWonFragment(numQuestions,questionIndex))
                     }
                 } else {
                     //game lost! Send to the Gameover fragment
-                    view.findNavController().navigate(R.id.action_gameFragment_to_gameOverFragment22)
+                    view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment())
                 }
             }
         }
